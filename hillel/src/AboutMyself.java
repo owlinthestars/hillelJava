@@ -6,7 +6,7 @@ public class AboutMyself {
         String myName = "Oleg";
         String fullName = "Osadchiy";
 
-        /*–ешил немного разнообразить, поискал информацию в интеренете - помен€л цвет*/
+        /*I wanted a little variety - find info about colors*/
         System.out.println((char)27 + "[31mInformation about myself:" +(char)27 +  "[0m");
 
         System.out.println((char)27 + "[32mStudent fullname: " +(char)27 +"[0m" + myName + " " + fullName);
@@ -15,11 +15,11 @@ public class AboutMyself {
         int todayYear = 2015;
         int myAge =(todayYear - bornYear);
 
-        /*“акой способ, если не выводить решение в одну переменную*/
+        /*This way for displaying version w/o third partially*/
 
         System.out.println ((char)27 + "[34mMy age without third Partially: " +(char)27 +"[0m"+ (todayYear - bornYear));
 
-        /*Ќо дл€ рациональности и полного соблюдени€ задани€ - выведем через третью переменную*/
+        /*For rationality and full complete the task - displaying third partially*/
         System.out.println ((char)27 + "[33mMy age with third Partially: " +(char)27 +"[0m"+ (myAge));
 
     }
