@@ -14,13 +14,13 @@ public class WorkWithNumbers {
     private static void areaOrPerimeter() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Please enter area of a rectangle ");
-        float area = scanner.nextFloat();
+        double area = scanner.nextDouble();
         System.out.print("Please enter Perimeter of a rectangle ");
-        float Perimeter = scanner.nextFloat();
+        double Perimeter = scanner.nextDouble();
 
-        float a = (int) ((Math.sqrt(Math.pow(Perimeter, 2) - 16 * area) + Perimeter) / 4);
+        double a = (int) ((Math.sqrt(Math.pow(Perimeter, 2) - 16 * area) + Perimeter) / 4);
 
-        float  b = (area / a);
+        double  b = (area / a);
 
         if (2 * a + 2 * b == Perimeter) {
             System.out.println("First sides = " + a );
@@ -66,7 +66,7 @@ public class WorkWithNumbers {
         Scanner scanner = new Scanner(System.in);
         System.out.print("What is your number?: ");
 
-        float number = scanner.nextFloat();
+        double number = scanner.nextDouble();
 
         if (number % 2 == 0) {
            System.out.println("You entered even number");
