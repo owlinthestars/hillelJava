@@ -7,53 +7,61 @@ public class WorkWithNumbers {
     public static void main(String[] args){
         checkNumbers();
         nearestNumber();
-        
+
+        checkTheSide();
+
+    }
+
+    private static void checkTheSide() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Please enter area of a rectangle ");
-        int area = scanner.nextInt();
+        float area = scanner.nextFloat();
         System.out.print("Please enter Perimeter of a rectangle ");
-        int Perimeter = scanner.nextInt();
+        float Perimeter = scanner.nextFloat();
 
-        int a = (int) ((Math.sqrt(Math.pow(Perimeter, 2) - 16 * area) + Perimeter) / 4);
+        float a = (int) ((Math.sqrt(Math.pow(Perimeter, 2) - 16 * area) + Perimeter) / 4);
 
-        int b = (area / a);
+        float b = (area / a);
 
         if (2 * a + 2 * b == Perimeter) {
             System.out.println("First sides" + a );
             System.out.println("Second sides = " + b);
 
-        } else if(a==b){
+        }
+        if(a==b){
+            
             System.out.println("Your figure is square");
 
         } else{
             System.out.println("Rectangle with this parameters cant exist");
         }
-
     }
 
     private static void nearestNumber() {
+
         Scanner scanner = new Scanner(System.in);
 
-
         System.out.print("Enter your first number: ");
-        int number1 = scanner.nextInt();
+        int firstNumber = scanner.nextInt();
 
         System.out.print("Enter your second number: ");
-        int number2 = scanner.nextInt();
+        int secondNumber = scanner.nextInt();
 
-        int constantNumber = 10;
-        int res1 = constantNumber - number1;
-
-
-        int res2 = constantNumber - number2;
-
-        if (res1 < res2) {
-            System.out.println("First number nearest");
-        } else if (res1 == res2) {
-            System.out.println("They also nearest");
-        } else {
-            System.out.println("Second number nearest ");
+        int numberTen = 10;
+        int res1 = numberTen - firstNumber;
+        int res2 = numberTen - secondNumber;
+        if(res1>res2){
+            System.out.println("First number is nearest;");
         }
+        if(res1==res2){
+            System.out.println("They also are nearest;");
+        }
+        if(res2>res1){
+            System.out.println("Second number is nearest;");
+        }
+
+
+
     }
 
     private static void checkNumbers() {
