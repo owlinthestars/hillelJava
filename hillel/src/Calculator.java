@@ -1,12 +1,10 @@
-/**
- * Created by Oleg on 29.09.2015.
- */import java.util.Scanner;
+import java.util.Scanner;
 /**
  * Created by Oleg on 29.09.2015.
  *
  */
 public class Calculator {
-    public void main(String[] args) {
+    public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter your a ");
