@@ -7,6 +7,8 @@ import java.util.Scanner;
 public class Calculator {
     public static void main(String[] args) {
         typeChecker();
+        mediumOperation();
+        easyOperation();
 
 
     }
@@ -16,62 +18,30 @@ public class Calculator {
 
         System.out.println("Enter your number: ");
         int b = scanner.nextInt();
-        scanner.nextLine();
-        System.out.println("Enter what type you want to check: ");
 
-        String var = scanner.nextLine();
 
-        if (b >= (-128) || b <= 127) {
+
+        if (b >= (-128) && b <= 127) {
             System.out.println("this number can be byte");
         } else {
             System.out.println("This number cant be byte");
         }
-        if (b >= -32768 || b <= 32767) {
+        if (b >= -32768 && b <= 32767) {
             System.out.println("this number can be short");
         } else {
             System.out.println("This number cant be short");
         }
-        if (b >= -2147483648 || b <= 2147483647) {
+        if (b >= -2147483648 && b <= 2147483647) {
             System.out.println("this number can be int");
         } else {
             System.out.println("This number cant be int");
         }
-        if (b >= -9223372036854775808L || b <= 9223372036854775807L) {
+        if (b >= -9223372036854775808L && b <= 9223372036854775807L) {
             System.out.println("this number can be long");
         } else {
             System.out.println("This number cant be long");
         }
-        /*
-        switch (var) {
-            case "byte":
-                if (b >= (-128) || b <= 127) {
-                    System.out.println("this number can be byte");
-                } else {
-                    System.out.println("This number cant be byte");
-                }
-                break;
-            case "short":
-                if (b >= -32768 || b <= 32767) {
-                    System.out.println("this number can be short");
-                } else {
-                    System.out.println("This number cant be short");
-                }
-                break;
-            case "int":
-                if (b >= -2147483648 || b <= 2147483647) {
-                    System.out.println("this number can be int");
-                } else {
-                    System.out.println("This number cant be int");
-                }
-                break;
-            case "long":
-                if (b >= -9223372036854775808L || b <= 9223372036854775807L) {
-                    System.out.println("this number can be long");
-                } else {
-                    System.out.println("This number cant be long");
-                }
-                break;
-        }*/
+
     }
 
     private static void mediumOperation() {
