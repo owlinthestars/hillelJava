@@ -1,3 +1,5 @@
+package Another;
+
 import java.util.Scanner;
 /**
  * Created by OsadchiyO on 01.10.2015.

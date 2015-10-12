@@ -5,7 +5,7 @@ package OOP;
  * Created by OsadchiyO on 05.10.2015.
  */
 public class Cat extends Animal {
-
+    // public - видят все . private - только класс. protected - все наследники.
     public static final boolean domestic = true;
     public static final boolean predator = true;
 
@@ -39,10 +39,13 @@ public class Cat extends Animal {
     //alt insert
     @Override
     public String toString() {
-        return "Cat{" +
+        //super - Результат toString method from Animal
+        String result = super.toString();
+        result += "Cat{" +
                 "pet=" + pet +
                 ", color='" + color + '\'' +
                 '}';
+        return result;
     }
 
     @Override

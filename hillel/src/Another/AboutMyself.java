@@ -1,3 +1,5 @@
+package Another;
+
 /**
  * Created by Oleg on 19.09.2015.
  */

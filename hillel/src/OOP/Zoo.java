@@ -10,7 +10,7 @@ public class Zoo {
         String sound = tomCat1.makeSound();
         System.out.println(sound);
 //Полиморфизм
-        Animal animal = new Animal();
+
         Cat cat = new Cat();
         Animal animalCat = new Cat();
 
@@ -20,6 +20,7 @@ public class Zoo {
         Object cat1 = new Cat(true, 3, "Tom", "blue-grey");
         Object cat2 = new Cat(true, 3, "Tom", "blue-grey");
         System.out.println("Polymorfism equals " + cat1.equals(cat2));
+
 
 
 
