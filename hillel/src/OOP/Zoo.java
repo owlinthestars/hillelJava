@@ -22,17 +22,17 @@ public class Zoo {
         System.out.println("Polymorfism equals " + cat1.equals(cat2));
 
 
+        //getter - poluchit' dannie; setter - izmeneniya;
 
 
-        Object[] objects = new Object[10];
-        objects[0]="some string";
-        objects[1] = new Cat(true, 3, "Tom", "blue-grey");
-        objects[2] = System.in;
-        for(Object o : objects){
-            System.out.println(o.toString());
-        }
-
+        Animal someOtherAnimal = new Cat();
+        System.out.println(someOtherAnimal.getSomeField());
+        System.out.println(someOtherAnimal.getTypeName());//tak delat' ploho.
+        System.out.println(Animal.getTypeName());//tak horosho;
+        Cat someOtherCat = new Cat();
+        System.out.println(someOtherCat.getTypeName());
     }
+
 
     private static void equalsCats() {
         Cat tomCat1 = new Cat(true, 3, "Tom", "blue-grey") ;
@@ -64,8 +64,6 @@ public class Zoo {
         Cat murzik = new Cat(true, 5, "Murzik", "black");
 
         Cat cat = new Cat();
-        System.out.println(cat.name);
-        System.out.println(tomCat.age);
-        System.out.println(murzik.age);
+
     }
 }
