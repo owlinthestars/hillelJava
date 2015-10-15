@@ -11,4 +11,9 @@ public class Red extends Color{
         String result = ("Color name: " + colorName + "Area of color: " + area);
         return result;
     }
+
+    @Override
+    public double paintConsumed(int area, int consumption) {
+        return 0;
+    }
 }

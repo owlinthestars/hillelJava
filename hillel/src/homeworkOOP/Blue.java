@@ -3,7 +3,7 @@ package homeworkOOP;
 /**
  * Created by Oleg on 15.10.2015.
  */
-public class Blue extends Color {
+public class Blue extends Color  {
 
     @Override
     public String askColor() {
@@ -11,5 +11,10 @@ public class Blue extends Color {
         area = 1;
         String result = ("Color name: " + colorName + "Area of color: " + area);
         return result;
+    }
+
+    @Override
+    public double paintConsumed(int area, int consumption) {
+        return 0;
     }
 }
