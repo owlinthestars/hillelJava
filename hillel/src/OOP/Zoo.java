@@ -1,5 +1,5 @@
 package OOP;
-import OOP.Cat;
+
 /**
  * Created by OsadchiyO on 05.10.2015.
  */
@@ -66,4 +66,9 @@ public class Zoo {
         Cat cat = new Cat();
 
     }
+
+    /**
+     * Created by OsadchiyO on 19.10.2015.
+     */
+
 }

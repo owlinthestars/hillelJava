@@ -4,7 +4,7 @@ package OOP;
 /**
  * Created by OsadchiyO on 05.10.2015.
  */
-public class Cat extends Animal {
+public class Cat extends Animal implements Comparable<Cat> {
     // public - видят все . private - только класс. protected - все наследники.
     public static final boolean domestic = true;
     public static final boolean predator = true;
@@ -58,5 +58,11 @@ public class Cat extends Animal {
     }
     public String getSomeField() {
         return someField;
+    }
+
+
+    @Override
+    public int compareTo(Cat o) {
+        return this.getName().compareTo(o.getName());
     }
 }
