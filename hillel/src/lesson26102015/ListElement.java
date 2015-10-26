@@ -20,7 +20,7 @@ public class ListElement {
         // return next == null ? 1: 1+next.size();
     }
 
-    public void add(Object value) {
+    public void add(Object value) {    
         if(next == null){
             next = new ListElement(value);
 
