@@ -4,11 +4,11 @@ package OOP;
 /**
  * Created by OsadchiyO on 05.10.2015.
  */
-public class Cat extends Animal {
+public class Cat extends Animal implements Comparable<Cat> {
     // public - видят все . private - только класс. protected - все наследники.
     public static final boolean domestic = true;
     public static final boolean predator = true;
-
+        public String someField = "Cats field";
       boolean pet;
       String color;
 
@@ -18,20 +18,20 @@ public class Cat extends Animal {
 
 
    public Cat (boolean pet, int age, String name, String color ){
-       this.pet = pet;
+       super(name, age);
 
+       this.pet = pet;
        this.color = color;
 
    }
     @Override
     public boolean equals(Object otherObject){
         System.out.println("In cat equals method! ");
+        if(!super.equals(otherObject)) return false;
         if(!(otherObject instanceof  Cat)) return false;
 
         Cat otherCat = (Cat) otherObject;
         if(pet != otherCat.pet)return false;
-        if(age != otherCat.age)return false;
-        if(!(name.equals(otherCat.name)))return false;
         if(!(color.equals(otherCat.color)))return false;
         return  true;
     }
@@ -52,5 +52,17 @@ public class Cat extends Animal {
     public String makeSound() {
         return "Meow";
 
+    }
+    public static String getTypeName(){
+        return "cat";
+    }
+    public String getSomeField() {
+        return someField;
+    }
+
+
+    @Override
+    public int compareTo(Cat o) {
+        return this.getName().compareTo(o.getName());
     }
 }
